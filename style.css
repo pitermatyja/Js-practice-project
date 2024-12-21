@@ -1,0 +1,97 @@
+* {
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: hsl(0, 3%, 52%);
+}
+
+h1 {
+    text-align: center;
+}
+
+.Buttons {
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+
+button {
+    background-color: antiquewhite;
+    padding: 10px;
+    margin: 0 10px 0 10px;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    width: 80px;
+}
+
+button:hover {
+   font-weight: bold;
+}
+
+#tryAgain {
+    width: 100px;
+}
+
+.game {
+    margin: 20px auto; /* Changed to auto horizontal margins for better centering */
+    display: grid;
+    /* Make columns responsive using minmax and auto-fit */
+    grid-template-columns: repeat(4, minmax(60px, 100px));
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+    height: 75vh;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.scoreboard {
+    text-align: center;
+}
+
+.square {
+    width: 100%;  /* Instead of fixed width */
+    aspect-ratio: 1; /* This maintains square shape */
+    background-color: white;
+    border: 1px solid black;
+}
+
+#no1 {
+    background-color: black;
+}
+
+@media screen and (max-width: 480px) {
+    .game {
+        gap: 5px; /* Reduce gap on small screens */
+        grid-template-columns: repeat(4, minmax(40px, 80px)); /* Smaller squares */
+    }
+}
+
+@media screen and (max-height: 520px) {
+    .game {
+        gap: 5px; /* Reduce gap on small screens */
+        grid-template-columns: repeat(4, minmax(40px, 80px)); /* Smaller squares */
+    }
+
+}
+
+#tryAgain {
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+}
+
+.game-over{
+display: none;
+position: absolute;
+top: 50%;
+left: 50%;
+padding: 13px;
+border-radius: 10px;
+transform: translate(-50%, -50%);
+color: rgb(31, 31, 31);
+font-size: 44px;
+font-weight: bold;
+justify-content: center;
+align-items: center;}
