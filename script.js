@@ -2,6 +2,7 @@ let timerHeading = document.getElementById('heading');
 document.getElementById('Start').addEventListener('click', startGame);
 document.getElementById('Stop').addEventListener('click', stopGame);
 document.getElementById('Restart').addEventListener('click', restartGame);
+document.getElementById('tryAgain').addEventListener('click', restartGame);
 
 let timeLeft = 100;
 let timerId = null;
@@ -12,6 +13,8 @@ let scoreDisplay = document.getElementById('score');
 let starPositions = [];
 let bombPositions = [];
 let maxBombs = 5;
+
+
 
 
 function startGame() {
@@ -61,8 +64,14 @@ function restartGame() {
         currentPosition = 1;
         pointer = document.getElementById('no1');
         pointer.style.backgroundColor = 'black';
+        document.getElementById('gameOver').style.display = 'none'
+       
         startGame();
     }
+ }
+
+ function tryAgain() {
+
  }
 
 let pointer = document.getElementById('no1');
